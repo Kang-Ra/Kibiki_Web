@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Form.css">
+    <title>Form</title>
+</head>
+<body>
+<div id="overlay"></div>
+<header>
+    <a href="" id="cara"> 
+        <h1 class="tutor">Cara Mengunakan KIBIKI APP ?</h1>
+    </a>
+</header>
+
+<section id="sectioncara">
+   <div id="papancara">
+    <span id="close">X</span>
+    <h3>Tata Cara Menggunakan Kibiki App Supaya Berhasil :</h3><br>
+    <ol>
+        <li>1. Foto Muka Anda</li>
+        <li>2. Tuliskan Tempat Anda Lahir (Bisa Diisi Dengan Kota/Desa)</li>
+        <li>3. Isi Tanggal Lahir Anda</li>
+        <li>4. Tuliskan Permohonan Yang Ingin Dikabulkan</li>
+        <li>5. Klik Buat Permohonan</li>
+        <li>6. Jika Anda Salah Memotret, Anda Bisa Memotret Ulang Dengan Mengklik Tombol Lingkaran Putih</li>
+    </ol>
+    </div>
+</section>
+
+<section id="kontenutama">
+ 
+  <div class="kamera">
+    <video id="kamera" autoplay playsinline></video>
+   <br>
+    <button onclick="ambilfoto()" type="button" id="btnfoto"></button>
+     </div>
+     <br><br>
+
+     <form action="" id="formuser">
+     <h1 class="hasilfoto" id="hasilfoto">Hasil Foto</h1>
+      <canvas id="canvas" style="display: none;">
+      </canvas>
+       <img id="hasil">
+        <label for="inputnama" >Nama :</label>
+          <input type="text" maxlength="30" id="inputnama" pattern="[A-Za-z .']+" required><br>
+            <label for="inputtempat">Tempat Lahir :</label>
+             <input type="text" id="inputtempat" maxlength="30" pattern="[A-Za-z .']+" required><br>
+              <label for="inputl">Tanggal Lahir :</label>
+               <input type="date" id="inputl" max="2021-12-31" required><br>
+                <label for="inputpermohonan" >Permohonan :</label>
+                <textarea name="" id="inputpermohonan"></textarea>
+                 <button id="btnmohon" type="submit">Buat Permohonan</button>
+                </form>
+                 </section>
+
+                 <div id="loadingconatiner">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="loading">
+    <path fill="currentColor" d="M12 6.5A1.5 1.5 0 0 0 13.5 5V2a1.5 1.5 0 0 0-3 0v3A1.5 1.5 0 0 0 12 6.5m-3.73-.39L6.15 4A1.53 1.53 0 0 0 4 4a1.48 1.48 0 0 0-.44 1.06A1.52 1.52 0 0 0 4 6.11l2.15 2.12a1.5 1.5 0 0 0 1.06.44a1.5 1.5 0 0 0 1.06-2.56M.5 12A1.5 1.5 0 0 0 2 13.5h3a1.5 1.5 0 0 0 0-3H2A1.5 1.5 0 0 0 .5 12M7 15.52a1.48 1.48 0 0 0-1.1.48l-2.13 2.08a1.51 1.51 0 0 0 0 2.12a1.51 1.51 0 0 0 2.13 0L8 18.08a1.5 1.5 0 0 0-1-2.56M10.5 22a1.5 1.5 0 0 0 3 0v-3a1.5 1.5 0 0 0-3 0Zm5.55-6a1.5 1.5 0 0 0 0 2.12l2.12 2.12a1.52 1.52 0 0 0 1.06.44a1.54 1.54 0 0 0 1.07-.44a1.5 1.5 0 0 0 .43-1.06a1.48 1.48 0 0 0-.44-1.07L18.17 16a1.5 1.5 0 0 0-2.12 0m7.45-4a1.5 1.5 0 0 0-1.5-1.5h-3a1.5 1.5 0 0 0-1.5 1.5a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5M19 3.41a1.52 1.52 0 0 0-1 .44L15.86 6a1.5 1.5 0 0 0 0 2.12a1.51 1.51 0 0 0 2.13 0L20.11 6A1.5 1.5 0 0 0 19 3.41"/>
+</svg>
+</div>
+
+<script src="Form.js"></script>
+</body>
+</html>
